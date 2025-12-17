@@ -13,7 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: go version
-
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.22' # better to wrap numbers in quotes
+      - run: go version
     
 
 
