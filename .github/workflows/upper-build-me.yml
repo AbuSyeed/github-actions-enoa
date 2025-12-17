@@ -12,11 +12,10 @@ jobs:
     name: build-go-app
     runs-on: ubuntu-latest
     steps:
+      # pwd -> printout the current directory
+      # ls -al -> list out all files
+      - run: pwd && ls -al
+      - uses: actions/checkout@v4
+      - run: pwd && ls -al
       - run: go version
-      - uses: actions/setup-go@v5
-        with:
-          go-version: '1.22' # better to wrap numbers in quotes
-      - run: go version
-    
-
-
+      
