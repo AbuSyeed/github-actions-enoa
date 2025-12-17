@@ -3,6 +3,9 @@ name: api-build
 on:
   push:
     paths:
+    # limiting push to a subset of paths
+    # to this .yml file
+    # and under the api directory - meaning the source code of this application
       - ".github/workflows/api-build.yml"
       - "api/**"
   workflow_dispatch: # manual
