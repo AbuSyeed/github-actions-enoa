@@ -23,5 +23,5 @@ jobs:
           go build
           ls
           go test
-          upper foo the bar
+          ./upper foo the bar
         working-directory: upper
