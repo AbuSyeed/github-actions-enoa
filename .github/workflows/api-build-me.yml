@@ -20,6 +20,8 @@ jobs:
       - run: dotnet --list-sdks
       - run: dotnet build
         working-directory: ./api
+      - run: dornet test
+        working-directory: ./api
       
 
 
