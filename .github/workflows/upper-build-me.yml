@@ -1,0 +1,19 @@
+name: upper-build-me
+
+on:
+  push:
+    paths:
+      - ".github/workflows/upper-build-me.yml"
+      - "upper/**"
+  workflow_dispatch: # manual
+
+jobs:
+  build:
+    name: build-go-app
+    runs-on: ubuntu-latest
+    steps:
+      - run: go version
+
+    
+
+
