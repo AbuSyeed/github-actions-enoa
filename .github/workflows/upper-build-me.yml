@@ -16,6 +16,9 @@ jobs:
       # ls -al -> list out all files
       - run: pwd && ls -al
       - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          cache-dependency-path: ./upper/go.sum
       - run: go mod download
       - run: pwd && ls -al
       - run: go version
