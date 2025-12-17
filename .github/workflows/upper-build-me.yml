@@ -16,6 +16,7 @@ jobs:
       # ls -al -> list out all files
       - run: pwd && ls -al
       - uses: actions/checkout@v4
+      - run: go mod download
       - run: pwd && ls -al
       - run: go version
       - run: | # to add an inline multi-line script
